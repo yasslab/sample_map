@@ -5,6 +5,11 @@
   </p>
 
   <p>
+    <strong>Photo:</strong>
+    <%= link_to spot.photo.filename, spot.photo if spot.photo.attached? %>
+  </p>
+
+  <p>
     <strong>Lat:</strong>
     <%= spot.lat %>
   </p>

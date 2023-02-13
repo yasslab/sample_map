@@ -53,7 +53,7 @@
   
       # Only allow a list of trusted parameters through.
       def spot_params
-        params.require(:spot).permit(:name, :lat, :lng)
+        params.require(:spot).permit(:name, :photo, :lat, :lng)
       end
   end
   

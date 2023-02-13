@@ -19,6 +19,11 @@
   </div>
 
   <div>
+    <%= form.label :photo, style: "display: block" %>
+    <%= form.file_field :photo, readonly: false %>
+  </div>
+
+  <div>
     <%= form.label :lat, style: "display: block" %>
     <%= form.text_field :lat, readonly: true %>
   </div>
