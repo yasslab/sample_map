@@ -5,7 +5,7 @@ module SpotsHelper
 
     # To use variant of image, you need to add 'image_processing' gem to your Gemfile."
     # html << "<strong>Photo:</strong> #{image_tag spot.photo.variant(resize: "100x100^")}<br />" if spot.photo.attached?
-    html << "<strong>Photo:</strong> #{image_tag spot.photo}<br />" if spot.photo.attached?
+    html << "<strong>Photo:</strong> #{image_tag spot.photo, width: '100%'}" if spot.photo.attached?
 
     return html.html_safe
   end
