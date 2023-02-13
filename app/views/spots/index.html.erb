@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Spots</h1>
+
+<div class="geolonia" data-geojson="/spots.json" style="height:300px;"></div>
+
+<div id="spots">
+  <% @spots.each do |spot| %>
+    <%= render spot %>
+    <p>
+      <%= link_to "Show this spot", spot %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New spot", new_spot_path, data: {turbo: false} %>
+
+<script type="text/javascript" src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>

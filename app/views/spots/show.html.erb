@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="geolonia"
+  data-lat=<%= @spot.lat %>
+  data-lng=<%= @spot.lng %>
+  data-zoom=16
+  style="height:300px;"><%= marker_content(@spot) %></div>
+
+<%= render @spot %>
+
+<div>
+  <%= link_to "Edit this spot", edit_spot_path(@spot), data: {turbo: false} %> |
+  <%= link_to "Back to spots", spots_path %>
+
+  <%= button_to "Destroy this spot", @spot, method: :delete %>
+</div>
+
+<script type="text/javascript" src="https://cdn.geolonia.com/v1/embed?geolonia-api-key=YOUR-API-KEY"></script>
